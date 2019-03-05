@@ -6,11 +6,11 @@ author: "ChenJF"
 header-img: "img/post-bg-imgs/1-hello-fight.png"  
 header-mask: 0.4  
 tags:  
-    -生活  
-    -小笔记  
+  生活  
+  小笔记  
 ---
 
-> "Keep on"
+> "Keep on."
 
 ## 前言
 换个地方写博客，新的环境总会带来许多小兴奋！  
@@ -30,21 +30,21 @@ tags:
 #### 本地版本控制
 * 查看工作区和暂存区状态：`git status`
 * 查看修改内容：`git diff`（当work tree not clean时）
-* 删除文件：手动删除后，`git rm [文件名]`。再commit（和add对应）
+* 删除文件：手动删除后，`git rm <文件名>`。再commit（和add对应）
 * 查看提交历史及相应版本号：`git log`
 * 回退版本：`git reset --hard  HEAD^`（HEAD表示指向当前版本的指针，加一个^就对应指向上一个版本）
-* 回退或撤销回退：`git reset --hard xxxx`（xxxx为版本号，前几位即可，会自动匹配。若回退后不知道版本号，使用git reflog查看）
+* 回退或撤销回退：`git reset --hard <xxxx>`（xxxx为版本号，前几位即可，会自动匹配。若回退后不知道版本号，使用git reflog查看）
 
 #### 远程仓库控制
 
 * 查看关联远程仓库：`git remote`
-*  添加关联远程仓库：`git remote add [远程主机名（平时常写的origin）][远程仓库地址]`
+*  添加关联远程仓库：`git remote add <远程主机名（平时常写的origin）> <远程仓库地址>`
 
 * 推送到远程仓库：`git push [远程主机名] [[本地分支名]:[远程分支名]]`
-（省略本地分支名和冒号就是选择当前分支作为要push上去的本地分支，如：git push origin master）
-（省略本地分支名就是删除远程分支，因为相当于push了空分支，如：git push origin :branch1）
-（省略[本地分支名]:[远程分支名]则视为push同名分支，远程没有会创建）
-（加上参数-u就相当于选择默认远程主机和分支，下次可以直接git push或pull）
+（省略本地分支名和冒号就是选择当前分支作为要push上去的本地分支，如：`git push origin master`）
+（省略本地分支名就是删除远程分支，因为相当于push了空分支，如：`git push origin :branch1`）
+（省略[本地分支名]:[远程分支名]则视为push同名分支，远程没有同名分支会创建）
+（加上参数-u就相当于选择默认远程主机和分支，下次可以直接`git push`或`git pull`）
 
 #### 分支管理
 * 查看分支：`git branch`
