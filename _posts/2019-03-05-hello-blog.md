@@ -3,10 +3,10 @@ layout: post
 title: "HELLO BLOG"  
 subtitle: "Hello 2019"  
 author: "ChenJF"  
-header-img: "img\post-bg-imgs\1-hello-fight.png"  
+header-img: "img/post-bg-imgs/1-hello-fight.png"  
 header-mask: 0.4  
-tag:  
-    -生活  
+tags:  
+    -生活1  
     -小笔记  
 ---
 
