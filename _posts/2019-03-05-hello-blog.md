@@ -6,7 +6,7 @@ author: "ChenJF"
 header-img: "img/post-bg-imgs/1-hello-fight.png"  
 header-mask: 0.4  
 tags:  
-    -生活1  
+    -生活  
     -小笔记  
 ---
 
