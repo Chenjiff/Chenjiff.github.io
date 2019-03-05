@@ -1,4 +1,4 @@
-> To be continue.
+> To be continue..
 
 <!-- > Yet another man.
 
