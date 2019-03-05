@@ -1,13 +1,13 @@
-﻿---
-layout: post
-title: "HELLO BLOG"
-subtitle: "Hello 2019"
-author: "ChenJF"
-header-img: "img\post-bg-imgs\1-hello-fight.png"
-header-mask: 0.4
-tag: 
-    -生活
-    -小笔记
+﻿---  
+layout: post  
+title: "HELLO BLOG"  
+subtitle: "Hello 2019"  
+author: "ChenJF"  
+header-img: "img\post-bg-imgs\1-hello-fight.png"  
+header-mask: 0.4  
+tag:  
+    -生活  
+    -小笔记  
 ---
 
 > "Keep on"
