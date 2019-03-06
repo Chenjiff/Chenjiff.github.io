@@ -8,8 +8,8 @@ header-mask: 0.4
 tags:  系统分析与设计
 ---
 [TOC]
-##作业一
-###Problems
+## 作业一
+### Problems
 **简答题**
  * 软件工程的定义
  * 解释导致 software crisis 本质原因、表现，述说克服软件危机的方法
@@ -17,7 +17,7 @@ tags:  系统分析与设计
  * SWEBoK 的 15 个知识域（An Overview of the SWEBOK Guide 请中文翻译其名称与简短说明）
  * 简单解释 CMMI 的五个级别。例如：Level 1 - Initial：无序，自发生产模式。
  * 用自己语言简述 SWEBok 或 CMMI （约200字）
-###Answers
+### Answers
 
 #### **软件工程的定义**
 1. 将系统化的、有严格约束的、可量化的方法应用于软件的开发、测试、运行和维护中，将工程化的思想贯穿在一个软件的生命周期中。
