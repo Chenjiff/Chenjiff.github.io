@@ -5,6 +5,7 @@ subtitle: "潘老师的课"
 author: "ChenJF"  
 header-img: "img/post-bg-imgs/2-system-analyse.jpg"  
 header-mask: 0.4  
+catalog: true
 tags:  系统分析与设计
 ---
 
