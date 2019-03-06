@@ -49,7 +49,7 @@ plugins: [jekyll-paginate]
 markdown: kramdown
 kramdown:
   input: GFM                            # use Github Flavored Markdown !important
-  use_coderay: true
+  #use_coderay: true
   syntax_highlighter_opts:
     span:
       line_numbers: false
