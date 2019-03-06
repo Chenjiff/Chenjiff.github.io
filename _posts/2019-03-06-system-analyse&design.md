@@ -8,7 +8,8 @@ header-mask: 0.4
 tags:  系统分析与设计
 ---
 
-[TOC]
+* TOC
+{:toc}
 
 ## 作业一
 ### Problems
