@@ -3,7 +3,7 @@ layout: post
 title: "系统分析与设计一"  
 subtitle: "潘老师的课"  
 author: "ChenJF"  
-header-img: "img/post-bg-imgs/2-systems-design&analysis.jpg"  
+header-img: "img/post-bg-imgs/2-systems-design-analysis.jpg"  
 header-mask: 0.4  
 catalog: true
 tags:  系统分析与设计
@@ -14,7 +14,7 @@ tags:  系统分析与设计
 
 ## 作业一
 ### Problems
-#### **简答题**
+#### *简答题*
  * 软件工程的定义
  * 解释导致 software crisis 本质原因、表现，述说克服软件危机的方法
  * 软件生命周期
@@ -24,7 +24,7 @@ tags:  系统分析与设计
 
 ### Answers
 
-#### **简答题**
+#### *简答题*
 ##### **软件工程的定义**
 1. 将系统化的、有严格约束的、可量化的方法应用于软件的开发、测试、运行和维护中，将工程化的思想贯穿在一个软件的生命周期中。
 2. 对1中叙述各部分的学习。
