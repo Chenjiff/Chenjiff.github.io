@@ -3,7 +3,7 @@ layout: post
 title: "系统分析与设计一"  
 subtitle: "潘老师的课"  
 author: "ChenJF"  
-header-img: "img/post-bg-imgs/2-systems-design-analysis.jpg"  
+header-img: "img/post-bg-imgs/2-systems-analysis-design.jpg"  
 header-mask: 0.4  
 catalog: true
 tags:  系统分析与设计
@@ -12,7 +12,6 @@ tags:  系统分析与设计
 * TOC
 {:toc}
 
-## 作业一
 ### Problems
 #### *简答题*
  * 软件工程的定义
