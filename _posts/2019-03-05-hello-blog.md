@@ -23,7 +23,7 @@ tags:
 
 这篇博客也仅仅说明一下博客搭建使用的技术，测试一下..
 
-Markdown使用的是kramdown解析器，生成目录以前的[TOC]用不了，要用* TOC（换行）{:toc}，相似的百度搜搜kramdown就ok。
+这里Markdown使用的是kramdown解析器，生成目录用不了[TOC]，要用* TOC（换行）{:toc}，等等。
 
 ## 正文
 正文随便弄一些..
