@@ -51,5 +51,6 @@ tags:  系统分析与设计
 ![](/img/in-post/SWSAD-in/kanban-catch.PNG)
 
 #### **UMLet使用练习**
+参考书：《UML和模式应用》第83页 图设想-1
 ![](/img/in-post/SWSAD-in/UML-catch.PNG)
 
