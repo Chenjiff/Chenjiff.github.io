@@ -97,17 +97,19 @@ tags:  系统分析与设计
 应该通过创新点在图中的位置来判断。如果创新位于较高的父级，则作用比较大。如果是子类或者是被包括的关系，则作用相对较小。
 4. 请使用 SCRUM 方法，选择一个用例图，编制某定旅馆开发的需求（backlog）开发计划表
 
-|ID	|Name|Imp|Est|How to demo|
-|---|---|------|------|--------|
-|1|find hotel|10|3|find by name or location|
-|2|make reservation|7|4|determine hotel name, room type, time and then pay|
-|3|sign in/out|5|2|register for accounts, login in/out|
-|4|comment hotel|4|2|	comment for a hotel|
+|ID	|Name|Imp|Est|How to demo|  
+|---|---|------|------|--------|  
+|1|find hotel|10|3|find by name or location|  
+|2|make reservation|7|4|determine hotel name, room type, time and then pay|  
+|3|sign in/out|5|2|register for accounts, login in/out|  
+|4|comment hotel|4|2|	comment for a hotel|  
+
 5. 根据任务4，参考 使用用例点估算软件成本，给出项目用例点的估算
 简单用例：1 到 3 个事务，权重=5
 一般用例：4 到 7 个事务，权重=10
 复杂用例：多于 7 个事务，权重=15
-|用例|	业务	|计算|	原因|	UC比重|
+
+|用例|	业务	|计算|	原因|	UC比重|  
 |----|-----------|---|-----|--------|
 |注册登录|	3|	3	||	简单|
 |查找酒店|	3|	3	||	简单|
