@@ -71,7 +71,7 @@ tags:  系统分析与设计
 1. 确定用例、系统
 2. 识别参与者
 3. 识别参与者和用例间的关系
-4. 作图（绘制用例）:  
+4. 作图（绘制用例）: 
     (1). 使用参与者自身能够理解的名称重命名用例，不要使用与代码有关的名称
     (2). 从主要的事务开始，直到后面较小的交互为止
     (3). 将每个用例放入支持它的系统或主要子系统（忽略只与用户有关的外观或组件）
@@ -97,12 +97,12 @@ tags:  系统分析与设计
 应该通过创新点在图中的位置来判断。如果创新位于较高的父级，则作用比较大。如果是子类或者是被包括的关系，则作用相对较小。
 4. 请使用 SCRUM 方法，选择一个用例图，编制某定旅馆开发的需求（backlog）开发计划表
 
-|ID	|Name|	Imp|	Est|	How to demo|
+|ID	|Name|Imp|Est|How to demo|
 |---|---|------|------|--------|
-|1	|find hotel|	10|	3|	find by name or location|
-|2	|make reservation|	7|	4|	determine hotel name, room type, time and then pay 
-|3	|sign in/out|	5|	2|	register for accounts, login in/out|
-|4	|comment hotel|	4|	2|	comment for a hotel|
+|1|find hotel|10|3|find by name or location|
+|2|make reservation|7|4|determine hotel name, room type, time and then pay|
+|3|sign in/out|5|2|register for accounts, login in/out|
+|4|comment hotel|4|2|	comment for a hotel|
 5. 根据任务4，参考 使用用例点估算软件成本，给出项目用例点的估算
 简单用例：1 到 3 个事务，权重=5
 一般用例：4 到 7 个事务，权重=10
@@ -111,5 +111,5 @@ tags:  系统分析与设计
 |----|-----------|---|-----|--------|
 |注册登录|	3|	3	||	简单|
 |查找酒店|	3|	3	||	简单|
-|预订房间|	10|	7	|支付和数据库，框架|	一般|
+|预订房间|	10|	7	|支付和数据库，框架|一般|
 |评论酒店|	3|	2	||	简单|
