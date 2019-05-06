@@ -84,9 +84,9 @@ tags:  系统分析与设计
 ### 建模练习
 #### 用例图
 电影票购买系统：
-![](/img/post-bg-imgs/in-post/SWSAD-in/uc1.png)  
+![电影票购买系统用例图](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SWSAD-in/uc1.png)  
 酒店预订系统：
-![](/img/post-bg-imgs/in-post/SWSAD-in/uc2.png)
+![酒店预订系统用例图](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SWSAD-in/uc2.png)
 
 #### 回答问题
 1. 为什么相似系统的用例图是相似的？
