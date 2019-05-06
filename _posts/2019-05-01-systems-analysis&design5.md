@@ -1,9 +1,9 @@
 ﻿---  
 layout: post  
-title: "系统分析与设计四"  
+title: "系统分析与设计五"  
 subtitle: "潘老师的课"  
 author: "ChenJF"  
-header-img: "img/post-bg-imgs/2-systems-analysis-design.jpg"  
+header-img: "https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/post-bg-imgs/2-systems-analysis-design.jpg"  
 header-mask: 0.4  
 catalog: true
 tags:  系统分析与设计
