@@ -3,7 +3,7 @@ layout: post
 title: "spring服务端返回数据/获取数据"  
 subtitle: "spring boot"  
 author: "ChenJF"  
-header-img: "https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/post-bg-imgs/3-sight.png"  
+header-img: "https://github.com/Chenjiff/Chenjiff.github.io/blob/master/img/post-bg-imgs/3-sight.png?raw=true"  
 header-mask: 0.4  
 catalog: true
 tags: 小程序服务端
