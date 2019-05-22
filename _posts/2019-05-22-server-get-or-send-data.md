@@ -146,12 +146,17 @@ Http传递请求体信息，最终会被封装进com.fasterxml.jackson.core.json
 
 觉得不需要用了..毕竟这是和视图联系在一起的，但是现在前后端分离做得很好了
 
-https://www.baidu.com/link?url=oeznWbSeLZMZtNPKM53eeoAVl4jplL99R9kXa0L0dHhbZhRDdmLWPR3Tv2bbd2u01FYmXVbT8zo5CCRlCMGBV_2_hv-i_82UWrN2F39hjf7&wd=&eqid=b8077d1a000e8681000000065ce54368
+[](https://www.baidu.com/link?url=oeznWbSeLZMZtNPKM53eeoAVl4jplL99R9kXa0L0dHhbZhRDdmLWPR3Tv2bbd2u01FYmXVbT8zo5CCRlCMGBV_2_hv-i_82UWrN2F39hjf7&wd=&eqid=b8077d1a000e8681000000065ce54368)
 
 ### 来自request Header
 
 request中还有cookie等信息。代码：
-
-https://blog.csdn.net/yelllowcong/article/details/79718068
-http://www.pianshen.com/article/4090137994/
-https://blog.csdn.net/ff906317011/article/details/78552426
+```java
+@RequestMapping(value="/requestParamTest", method = RequestMethod.POST)
+    public String requestParamTest(HttpServletRequest request){
+        return request.getHeader("JSESSIONID");
+    }
+```
+[](https://blog.csdn.net/yelllowcong/article/details/79718068)
+[](http://www.pianshen.com/article/4090137994/)
+[](https://blog.csdn.net/ff906317011/article/details/78552426)
