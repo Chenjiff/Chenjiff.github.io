@@ -1,2 +1,2 @@
 # Chenjiff.github.io
-Blogs
+[Main Page](https://chenjiff.github.io/)
