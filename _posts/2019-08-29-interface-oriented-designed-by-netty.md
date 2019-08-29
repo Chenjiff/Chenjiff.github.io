@@ -14,7 +14,7 @@ tags: 后路
 {:toc}
 ---
 
->  本文通过Netty中的EventLoop和EventLoopGroup来理解类和接口设计的原则和用意。
+>  本文通过 Netty 中的 EventLoop 和 EventLoopGroup 来理解类和接口设计的原则和用意。
 
 ### Question
 
@@ -24,13 +24,13 @@ tags: 后路
 
 下面是常用到的Nio操作相关类的类图：
 
-* NioEventLoop：
+* NioEventLoop： 
 
-![](C:\Users\chenjifff\Desktop\NioEventLoop.png)
+ ![](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/back/NioEventLoop.png)  
 
 * NioEventLoopGroup：  
 
-  ![](C:\Users\chenjifff\Desktop\NioEventLoopGroup.png)
+  ![](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/back/NioEventLoopGroup.png)  
 
 1. 可以看到NioEventLoop中EventLoop接口还继承了EventLoopGroup接口，这也是我一开始困惑的地方，明明后者是前者的组合，按理说EventLoop中有一个parent()方法来获得所属的EventLoopGroup就应该足够了，为什么还要实现EventLoopGroup接口呢？
 
@@ -46,14 +46,14 @@ tags: 后路
 
 **extends学术上严格定义是is-a关系。**务必要遵循这条定义，下文会说。
 
-##### extends的目的
+* extends的目的
 
 继承是为了什么呢，结合我的理解和网上的资料，我认为继承是为了代码重用，可以体现在两个方面：
 
 1. 子类可以直接使用父类的方法，这个就不用说了。
 2. 可以通过多态使得父类直接使用子类的方法。
 
-##### extends可能的缺点
+* extends可能的缺点
 
 1. 破坏了类的封装性
 2. 子类使用到了父类的方法，产生了耦合，容易导致软件复杂度失控
@@ -64,7 +64,7 @@ tags: 后路
 
 详细解释见： [(1)](https://www.cnblogs.com/xz816111/p/9080173.html  ) [(2)](https://lovoedu.gitee.io/javablog/2017/06/01/20170601/  )
 
-##### 面向对象
+*  面向对象
 
 面向对象有着不少缺点，它的唯一优点：是代码复用最简洁明了的实现。因此我们需要使用它时要满足以下前提（但是还是要“享受”它的一些缺点）：
 
@@ -75,13 +75,13 @@ tags: 后路
 
 #### 理解面向接口
 
-##### 理解interface
+* 理解interface
 
 interface是一种**声明**或**协议**，它用来表明一个类实现了一些功能，让那些需要使用到这个类的地方准确知道它可以调用这个类的某个方法。
 
 接口继承接口是单纯的协议的扩展，表示拥有更复杂的功能。
 
-##### 为什么要面向接口
+* 为什么要面向接口
 
 引用一句我觉得非常贴切的话：
 
