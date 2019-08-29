@@ -16,7 +16,9 @@ tags: 小程序服务端
 
 Spring框架下服务端返回JSON数据也是比以前方便很多的，不需要去处理JSON对象&JSON数组&JSON字符串这些以前要处理的乱七八糟的东西，基本只需要建好相应类，直接映射就好了（包括传入也是），主要工作有两步：设置Header属性content-type，一般设为"application/json;charset=utf-8"，和前端对应。可以有两种方法实现（本质一样）：
 ## 返回JSON数据
+
 ### 一、设置注解
+
 通过在@RequestMapping方法上加上@ResponseBody注解（若类为RestController则默认所有方法都自动添加了），接着在修改@RequestMapping为`@RequestMapping(value = <myUri>, produces = "application/json;charset=UTF-8")`，这行代码即设置了返回类型，然后直接返回对象即可，代码如下：
 ```java
 @RequestMapping(value = "/uri", produces = "application/json;charset=UTF-8")
