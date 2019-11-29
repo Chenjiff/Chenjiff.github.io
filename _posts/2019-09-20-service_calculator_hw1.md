@@ -93,17 +93,33 @@ tags:  服务计算
 
   ![8](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/9.png)
 
-  然而进去之后发现网络是不可用的，还需要修改一下/etc/sysconfig/network-scripts/ifconfig-enp0s3文件，ONBOOT值改为YES:
+  这时换了桌面版下面再说。
 
-  ![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/10.png)
+* 检查网卡配置
 
-  并且重启一下网卡`service network restart`，之后就可以使用网络了，上面的命令访问主机，下面的访问外网:
+  配置网络的UI界面 `nmtui`，配置第一块和第二块网卡的相关信息，这里我将第二块网卡的IP设为192.168.100.2：
 
-  ![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/11.png)
+  ![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/16.png)
 
-  网卡信息如下，ifconfig命令centos的minimal版本默认没有，可以用ip addr替代或者用yum下载，下图从上到下依次为nat、host-only、本地回环网络：
+​		然而这时网络还是不可用的，还需要修改一下/etc/sysconfig/network-scripts/ifconfig-enp0s3文件，ONBOOT值改为YES:
 
-  ![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/13.png)
+​	![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/31.png)
+
+​		还有ifconfig-enp0s8文件，由于我是静态IP，没有启动dhcp，所以需要如下:
+
+​			![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/30.png)
+
+​		并且重启一下网卡`service network restart`，之后就可以使用网络了，上面的ping命令访问宿主机（注意要先关防火墙），下面的ping命令访问外网:
+
+![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/32.png)
+
+​		网卡信息如下，ifconfig命令centos的minimal版本默认没有，可以用`ip addr`替代或者用yum下载，下图从上到下依次为nat、host-only、本地回环网络：
+
+![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/34.png)
+
+​		主机ping虚拟机：
+
+​		![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/15.png)
 
 - 升级 OS 系统内核
 
@@ -116,17 +132,9 @@ tags:  服务计算
 
   - 升级 OS内核， `yum update`
 
-- 检查网卡配置
+  
 
-  - 配置网络的UI界面 `nmtui`，配置第二块网卡相关信息，这里我将IP设为192.168.100.2：
-
-    ![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/16.png)
-
-  - ping 主机，例如： `ping 192.168.100.1`，之前已经ping过了，当然是通的。
-
-  - 主机ping虚拟机：
-
-    ![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/15.png)
+  ![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/15.png)
 
 ### 三、复制虚拟机
 
@@ -140,15 +148,29 @@ tags:  服务计算
 
 - 配置主机名和第二块网卡
 
-  - 使用 `nmtui` 修改主机名和第二块网卡IP地址，并重启，步骤一样的，这里我设为192.168.100.3：
+  使用 `nmtui` 修改主机名和第二块网卡IP地址，并重启，步骤一样的，这里我设为192.168.100.3：
 
-    ![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/20.png)
+  ![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/20.png)
 
-  - 在主机上， ping 这个地址:
+  之后相似地修改两个相应文件，不赘述了。
 
-    ![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/19.png)
+  ![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/28.png)
 
-  - 通过 ssh 访问该虚拟机：
+  ![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/27.png)
+  
+  在主机上， ping 这个地址:
+  
+  ![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/19.png)
+  
+- 通过 ssh 访问该虚拟机：
+
+  - 虚拟机上要安装相应的ssh工具如openssl：
+
+  ![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/22.png)
+
+  * 之后宿主机直接访问即可：
+
+    ![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/23.png)
 
 ### 四、其他
 
@@ -159,7 +181,7 @@ tags:  服务计算
   3. 安装桌面 `yum groupinstall "GNOME Desktop"`
   4. 设置启动目标为桌面，我用的是网上的命令 `systemctl set-default graphical.target `
 
-  5. 重启
+  5. 重启 `reboot`
 
      ![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/21.png)
 
@@ -184,7 +206,7 @@ tags:  服务计算
   
     按照博客的内容步骤来
   
-    1. 官网安装扩展，注意版本一致，否则出错：
+    1. 官网安装扩展，注意版本一致，否则出现mismatch错误：
   
        ![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/24.png)
   
