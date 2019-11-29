@@ -87,7 +87,7 @@ tags:  服务计算
 
   ![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/12.png)
 
-- 开机之后选择镜像文件，进入安装流程，重启即可：
+  开机之后选择镜像文件，进入安装流程，重启即可：
 
   ![8](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/8.png)
 
@@ -101,21 +101,21 @@ tags:  服务计算
 
   ![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/16.png)
 
-​		然而这时网络还是不可用的，还需要修改一下/etc/sysconfig/network-scripts/ifconfig-enp0s3文件，ONBOOT值改为YES:
+  然而这时网络还是不可用的，还需要修改一下/etc/sysconfig/network-scripts/ifconfig-enp0s3文件，ONBOOT值改为YES:
 
-​	![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/31.png)
+​		![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/31.png)  
 
-​		还有ifconfig-enp0s8文件，由于我是静态IP，没有启动dhcp，所以需要如下:
+​		还有ifconfig-enp0s8文件，由于我是静态IP，没有启动dhcp，所以需要修改如下:  
 
-​			![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/30.png)
+​		![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/30.png)
 
 ​		并且重启一下网卡`service network restart`，之后就可以使用网络了，上面的ping命令访问宿主机（注意要先关防火墙），下面的ping命令访问外网:
 
-![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/32.png)
+​		![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/32.png)
 
 ​		网卡信息如下，ifconfig命令centos的minimal版本默认没有，可以用`ip addr`替代或者用yum下载，下图从上到下依次为nat、host-only、本地回环网络：
 
-![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/34.png)
+​		![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/34.png)
 
 ​		主机ping虚拟机：
 
