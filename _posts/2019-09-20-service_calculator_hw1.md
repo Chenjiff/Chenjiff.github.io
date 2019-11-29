@@ -6,7 +6,6 @@ author: "ChenJF"
 header-img: "img/post-bg-imgs/2-systems-analysis-design.jpg"  
 header-mask: 0.4  
 catalog: true
-
 tags:  服务计算
 ---
 
@@ -14,11 +13,11 @@ tags:  服务计算
 {:toc}
 ---
 
-想到云计算、云平台，立马觉得高深莫测。如果你想搭建自己使用的桌面云，使用 VirtualBox 这样的开源软件【注1】，仅需要几十分钟或几个小时就能如你所愿。
-
-Let’s Go！
-
-【注1】![img](https://pmlpml.github.io/unity3d-learning/images/drf/info.png) 对于系统工程师最大的困扰就是复杂的硬件和软件环境。本实验仅是Window 10 PC 作为主机（HOST）对外租用虚拟机的一种设置。事实上，其他操作系统也是可行的，也不一定非得 VirtualBox。在这个过程中，你会遇到各种各样的操作、配置和网络问题（**坑**）。目前并不能给你一个完整地、详尽地操作决解方案。
+> 想到云计算、云平台，立马觉得高深莫测。如果你想搭建自己使用的桌面云，使用 VirtualBox 这样的开源软件【注1】，仅需要几十分钟或几个小时就能如你所愿。
+>
+> Let’s Go！
+>
+> 【注1】 对于系统工程师最大的困扰就是复杂的硬件和软件环境。本实验仅是Window 10 PC 作为主机（HOST）对外租用虚拟机的一种设置。事实上，其他操作系统也是可行的，也不一定非得 VirtualBox。在这个过程中，你会遇到各种各样的操作、配置和网络问题（**坑**）。目前并不能给你一个完整地、详尽地操作决解方案。
 
 ## 1、实验目的
 
@@ -26,11 +25,11 @@ Let’s Go！
 2. 理解系统工程师面临的困境
 3. 理解自动化安装、管理（DevOps）在云应用中的重要性
 
-![img](https://pmlpml.github.io/unity3d-learning/images/drf/info.png) 本实验需要一定的网络知识和系统方面经验，如无法独立完成，请积极与同学协作或到技术群咨询。
+*本实验需要一定的网络知识和系统方面经验，如无法独立完成，请积极与同学协作或到技术群咨询。*
 
 ## 2、实验环境与要求
 
-![img](https://pmlpml.github.io/unity3d-learning/images/drf/info.png) 实验需要硬件虚拟化（AMD-V 或 Intel-VT）支持，部分旧笔记本不支持。
+ *实验需要硬件虚拟化（AMD-V 或 Intel-VT）支持，部分旧笔记本不支持。*
 
 - 用户通过互联网，使用微软远程桌面，远程访问你在PC机上创建的虚拟机
 - 虚拟机操作系统 Centos，Ubuntu，或 你喜欢的 Linux 发行版，能使用 NAT 访问外网。
@@ -55,7 +54,7 @@ Let’s Go！
 
 - 创建虚拟机内部虚拟网络，使得 Vbox 内部虚拟机可以通过它，实现虚拟机之间、虚拟机与主机的通讯
 
-  - VirtualBox菜单 ：管理 -> 主机网络管理器，创建一块虚拟网卡，网址分配：192.168.100.1/24： 
+  - VirtualBox菜单 ：管理 -> 主机网络管理器，创建一块虚拟网卡，网址分配为192.168.100.1/24： 
 
     ![3](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/3.png)
 
@@ -98,11 +97,11 @@ Let’s Go！
 
   ![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/10.png)
 
-  并且重启一下网卡`service network restart`，之后就可以使用网络了，第一个命令访问主机，第二个访问外网:
+  并且重启一下网卡`service network restart`，之后就可以使用网络了，上面的命令访问主机，下面的访问外网:
 
   ![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/11.png)
 
-  网卡信息如下，ifconfig命令centos的minimal版本默认没有，可以用ip addr替代或者用yum下载，上到下依次为nat、host-only、本地回环网络：
+  网卡信息如下，ifconfig命令centos的minimal版本默认没有，可以用ip addr替代或者用yum下载，下图从上到下依次为nat、host-only、本地回环网络：
 
   ![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/13.png)
 
@@ -119,7 +118,7 @@ Let’s Go！
 
 - 检查网卡配置
 
-  - 配置网络的UI界面 `nmtui`，配置第二块网卡相关信息，这里我IP设为192.168.100.2：
+  - 配置网络的UI界面 `nmtui`，配置第二块网卡相关信息，这里我将IP设为192.168.100.2：
 
     ![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/16.png)
 
@@ -141,15 +140,15 @@ Let’s Go！
 
 - 配置主机名和第二块网卡
 
-  - 使用 `nmtui` 修改主机名和第二块网卡IP地址，并重启，步骤一样的，改为192.168.100.3：
+  - 使用 `nmtui` 修改主机名和第二块网卡IP地址，并重启，步骤一样的，这里我设为192.168.100.3：
 
     ![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/20.png)
 
-  - 在主机上，应能 ping 到这个地址:
+  - 在主机上， ping 这个地址:
 
     ![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/19.png)
 
-  - 通过 ssh 访问该虚拟机:
+  - 通过 ssh 访问该虚拟机：
 
 ### 四、其他
 
@@ -180,7 +179,22 @@ Let’s Go！
 
 * 配置用远程桌面访问你的虚拟机
   * 参考：[如何设置VirtualBox虚拟机远程访问模式](https://www.jianshu.com/p/6f0f35fa2c4f)
+  
   * 虚拟机无界面启动，用户即可通过网络，使用RDP客户端访问
+  
+    按照博客的内容步骤来
+  
+    1. 官网安装扩展，注意版本一致，否则出错：
+  
+       ![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/24.png)
+  
+    2. 设置虚拟机连接用的端口
+  
+       ![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/25.png)
+  
+    3. 设置并使用Windows的remote desktop connection或其他支持rdp的程序
+  
+       ![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h1/26.png)
 
 以上一些操作内容仅适用宿主（hosted）为 window 10 环境，安装 CentOS 7 的操作。
 
