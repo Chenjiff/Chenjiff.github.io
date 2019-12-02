@@ -157,7 +157,7 @@ go install github.com/user/hello
 $ hello
 ```
 
-![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h2/1.png)
+![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h3/1.png)
 
 推送到远程仓库：
 
@@ -222,7 +222,7 @@ go install github.com/user/hello
 hello
 ```
 
-![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h2/2.png)
+![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h3/2.png)
 
 #### 4. 测试
 
@@ -257,7 +257,7 @@ $ go test github.com/user/stringutil
 ok  	github.com/user/stringutil 0.165s
 ```
 
-![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h2/3.png)
+![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h3/3.png)
 
 #### 5. 远程包
 
@@ -268,7 +268,7 @@ $ go get github.com/golang/example/hello
 $ $GOPATH/bin/hello
 ```
 
-![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h2/4.pn
+![12](https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/in-post/SC/h3/4.png)
 
 
 
