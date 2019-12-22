@@ -1,6 +1,6 @@
 ---
 layout: post  
-title: "开发命令行程序"  
+title: "Go开发命令行程序"  
 subtitle: "服务计算"  
 author: "ChenJF"  
 header-img: "img/post-bg-imgs/2-systems-analysis-design.jpg"  
@@ -117,7 +117,7 @@ defer file.Close()
 
 输出到bytes.Buffer
 
-```
+```go
 for {
 	bs, err := rd.ReadSlice('\f')
 	if cp >= sc.st && cp <= sc.ed {
