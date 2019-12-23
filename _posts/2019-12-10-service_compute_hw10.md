@@ -18,6 +18,8 @@ tags:  服务计算
   1. Request
 
      url: /v1/users/register(POST)
+     
+     
 
     ```
      {
@@ -30,6 +32,9 @@ tags:  服务计算
     ```
 
  2. Response
+    
+    
+    
     ```
     {
       "id": 1
@@ -41,6 +46,8 @@ tags:  服务计算
 1. Request
  url: /v1/users/login(POST)
 
+    
+    
     ```
     {
     	"username": ""
@@ -48,11 +55,13 @@ tags:  服务计算
     	"captcha_id": "",
     	"captcha_code": "",
     	"created_at": YYYY-MM-DDTHH:MM:SSZ
-    }
-    ```
-
+}
+ ```
+ 
 2. Response
-成功：
+  成功：
+
+  
 ```
 {
 	"login_token": "",
@@ -61,6 +70,9 @@ tags:  服务计算
 status code: 201 OK
 ```
 错误：
+
+
+
 ```
 {
   "message": "Invalid password",
@@ -69,6 +81,9 @@ status code: 201 OK
 status code: 401 Unauthorized
 ```
 过多尝试禁止：
+
+
+
 ```
 {
   "message": "attempts too much!",
@@ -82,6 +97,8 @@ status code： 403 Forbidden
 url: /v1/blog/categories(GET)
 
 2. Response
+
+   
 ```
 {
  "categories"[
@@ -96,13 +113,17 @@ status code: 200 OK
 ```
 * 创建分类列表（需合法token）
 1. Request
-/v1/blog/categories(POST)
+  /v1/blog/categories(POST)
+
+  
 ```
 {
     "name": ""
 }
 ```
 2. Response
+
+   
 ```
 {
     "id": 0,
@@ -115,12 +136,17 @@ status code: 201
 1. Request
 url: /v1/blog/categories/{category_id}(PUT)
 
-    ```
+   
+   
+   ```
     {
         "name": ""
     }
-    ```
+   ```
+   
 2. Response
+
+   
 ```
 {
     "id": 0,

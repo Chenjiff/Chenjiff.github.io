@@ -21,7 +21,9 @@ mux是通过路由处理请求的，接下来我们就看看它是怎么进行�
 
 - 下面是Router的结构体，注释可以获得很多信息，所有请求都会经由这个结构体代表的路由进行分发，接下来我们就看看它的具体内容：
 
-```y&#39;y&#39;y&#39;y&#39;yyyyyyyyyyyyyygo
+
+
+```go
 // This will send all incoming requests to the router.
 type Router struct {
   // Configurable Handler to be used when no route matches.
@@ -52,7 +54,10 @@ type Router struct {
 ```
 
 NotFoundHandler表示没有入站规则满足请求时会触发的处理器，MethodNotAllowedHandle请求方法（也就是post、get那些）不满足时触发的触发器，parentRoute为上级路由器（请求由上至下层层传递），Route表示待匹配的路由列表，namedRoutes是一个url匹配对应路由的路由map，接下来是我们再看三个bool类型的标志值，注释提醒我们去找对应函数：
+
 1. strictSlash
+
+
 
 ```go
 // StrictSlash defines the trailing slash behavior for new routes. The initial
@@ -74,6 +79,8 @@ func (r *Router) StrictSlash(value bool) *Router {
 
 2. skipClean
 
+
+
 ```go
 // SkipClean defines the path cleaning behaviour for new routes. The initial
 // value is false. Users should be careful about which routes are not cleaned
@@ -92,6 +99,8 @@ func (r *Router) SkipClean(value bool) *Router {
 ​	表示path中存在冗余斜杆的行为，false表示不会去清除路径中的//，true会。默认值为false。
 
 3. useEncodedPath
+
+
 
 ```go
 // UseEncodedPath tells the router to match the encoded original path
