@@ -55,4 +55,5 @@ tags:  服务计算
 
 ### 四、项目地址
 
-分享链接： http://www.go-online.org.cn:8080/share/bo0bth676kvk304rcn10?secret=false
+分享链接： [http://www.go-online.org.cn:8080/share/bo0bth676kvk304rcn10?secret=false](http://www.go-online.org.cn:8080/share/bo0bth676kvk304rcn10?secret=false)
+
