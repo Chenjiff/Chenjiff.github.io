@@ -13,7 +13,7 @@ tags:  服务计算
 {:toc}
 
 
-* 用户注册
+### 用户注册
 
 **Request**
 
@@ -41,7 +41,7 @@ url: /v1/users/register(POST)
 status code: 201 
 ```
 
-* 用户登陆
+### 用户登陆
 
 **Request**
 
@@ -62,8 +62,6 @@ url: /v1/users/login(POST)
 **Response**
 
 成功：
-
-
 
 ```
 {
@@ -91,15 +89,13 @@ status code: 401 Unauthorized
 status code： 403 Forbidden
 ```
 
-* 获取博客分类列表
+### 获取博客分类列表
 
 **Request**
 
 url: /v1/blog/categories(GET)
 
 **Response**
-
-
 
 ```
 {
@@ -113,7 +109,7 @@ url: /v1/blog/categories(GET)
 }
 status code: 200 OK
 ```
-* 创建分类列表（需合法token）
+### 创建分类列表（需合法token）
 
 **Request**
 
@@ -134,7 +130,7 @@ status code: 200 OK
 status code: 201 
 ```
 
-* 更新分类列表（需合法token）
+### 更新分类列表（需合法token）
 
 **Request**
 
@@ -158,7 +154,7 @@ url: /v1/blog/categories/{category_id}(PUT)
 status code: 200 OK
 ```
 
-* 删除分类（需合法token）
+### 删除分类（需合法token）
 
 **Request**
 
@@ -177,7 +173,7 @@ url: /v1/blog/categories/{category_id}(DELETE)
 }
 status code: 204 No Content
 ```
-* 获取某个分类内的文章
+### 获取某个分类内的文章
 
 **Request**
 
@@ -201,7 +197,7 @@ url: /v1/blog/categories/{category_id}(GET)
 }
 status code: 200 OK
 ```
-* 获取某个文章
+### 获取某个文章
 
 **Request**
 
@@ -220,7 +216,7 @@ url: /v1/blog/articles/{article_id}(GET)
 }
 status code: 200 OK
 ```
-* 创建新文章（需合法token）
+### 创建新文章（需合法token）
 
 **Request**
 
@@ -247,9 +243,9 @@ url: /v1/blog/articles(PUT)
 status code: 201 
 ```
 
-* 更新文章（需合法token）
+### 更新文章（需合法token）
 
-**Request
+**Request**
 
 url: /v1/blog/articles/{article_id}(PUT)
 
@@ -274,9 +270,9 @@ url: /v1/blog/articles/{article_id}(PUT)
 status code: 200 OK
 ```
 
-* 删除文章（需合法token）
+### 删除文章（需合法token）
 
-**Request
+**Request**
 
 url: /v1/blog/articles/{article_id}(DELETE)
 
@@ -288,9 +284,9 @@ url: /v1/blog/articles/{article_id}(DELETE)
 }
 status code: 204 No Content
 ```
-* 获取文章的评论
+### 获取文章的评论
 
-**Request
+**Request**
 
 url: /v1/blog/articles/{article_id}/comments(GET)
 
@@ -310,9 +306,9 @@ Status: 200 OK
     Status: 200 OK
 ```
 
-* 添加评论（需合法token）
+### 添加评论（需合法token）
 
-**Request
+**Request**
 
 url: /v1/blog/articles/{article_id}/comments(POST)
 
