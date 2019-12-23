@@ -31,34 +31,32 @@ tags:  服务计算
      }
     ```
 
- 2. Response
-    
-    
-    
-    ```
-    {
-      "id": 1
-      "user_name": ""
-    }
-    status code: 201 
-    ```
+  2. Response
+```
+{
+  "id": 1
+  "user_name": ""
+}
+status code: 201 
+```
+
 * 用户登陆
 1. Request
  url: /v1/users/login(POST)
 
-    
-    
-    ```
-    {
-    	"username": ""
-    	"password": "",
-    	"captcha_id": "",
-    	"captcha_code": "",
-    	"created_at": YYYY-MM-DDTHH:MM:SSZ
+
+
+```
+{
+	"username": ""
+	"password": "",
+	"captcha_id": "",
+	"captcha_code": "",
+	"created_at": YYYY-MM-DDTHH:MM:SSZ
 }
- ```
- 
-2. Response
+```
+
+1. Response
   成功：
 
   
@@ -136,15 +134,15 @@ status code: 201
 1. Request
 url: /v1/blog/categories/{category_id}(PUT)
 
-   
-   
-   ```
-    {
-        "name": ""
-    }
-   ```
-   
-2. Response
+
+
+```
+ {
+     "name": ""
+ }
+```
+
+1. Response
 
    
 ```
