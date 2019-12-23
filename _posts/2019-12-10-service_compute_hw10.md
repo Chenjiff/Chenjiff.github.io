@@ -15,11 +15,11 @@ tags:  服务计算
 
 ﻿* 用户注册
 
-  1. Request
+**Request**
 
-     url: /v1/users/register(POST)
-     
-     
+url: /v1/users/register(POST)
+
+
 
     ```
      {
@@ -31,7 +31,8 @@ tags:  服务计算
      }
     ```
 
-  2. Response
+**Response**
+
 ```
 {
   "id": 1
@@ -41,8 +42,9 @@ status code: 201
 ```
 
 * 用户登陆
-1. Request
- url: /v1/users/login(POST)
+
+**Request**
+url: /v1/users/login(POST)
 
 
 
@@ -56,10 +58,11 @@ status code: 201
 }
 ```
 
-1. Response
-  成功：
+**Response**
+成功：
 
-  
+
+
 ```
 {
 	"login_token": "",
@@ -68,8 +71,6 @@ status code: 201
 status code: 201 OK
 ```
 错误：
-
-
 
 ```
 {
@@ -80,8 +81,6 @@ status code: 401 Unauthorized
 ```
 过多尝试禁止：
 
-
-
 ```
 {
   "message": "attempts too much!",
@@ -91,12 +90,14 @@ status code： 403 Forbidden
 ```
 
 * 获取博客分类列表
-1. Request
+
+**Request**
 url: /v1/blog/categories(GET)
 
-2. Response
+**Response**
 
-   
+
+
 ```
 {
  "categories"[
@@ -110,18 +111,17 @@ url: /v1/blog/categories(GET)
 status code: 200 OK
 ```
 * 创建分类列表（需合法token）
-1. Request
-  /v1/blog/categories(POST)
 
-  
+**Request**
+/v1/blog/categories(POST)
+
 ```
 {
     "name": ""
 }
 ```
-2. Response
+**Response**
 
-   
 ```
 {
     "id": 0,
@@ -131,10 +131,9 @@ status code: 201
 ```
 
 * 更新分类列表（需合法token）
-1. Request
+
+**Request**
 url: /v1/blog/categories/{category_id}(PUT)
-
-
 
 ```
  {
@@ -142,9 +141,8 @@ url: /v1/blog/categories/{category_id}(PUT)
  }
 ```
 
-1. Response
+**Response**
 
-   
 ```
 {
     "id": 0,
@@ -156,14 +154,16 @@ status code: 200 OK
 ```
 
 * 删除分类（需合法token）
-1. Request
+
+**Request**
 url: /v1/blog/categories/{category_id}(DELETE)
+
 ```
 {
     "name": ""
 }
 ```
-2. Response
+**Response**
 
 ```
 {
@@ -172,10 +172,12 @@ url: /v1/blog/categories/{category_id}(DELETE)
 status code: 204 No Content
 ```
 * 获取某个分类内的文章
-1. Request
+
+**Request**
 url: /v1/blog/categories/{category_id}(GET)
 
-2. Response
+**Response**
+
 ```
 {
     "category": "",
@@ -193,10 +195,12 @@ url: /v1/blog/categories/{category_id}(GET)
 status code: 200 OK
 ```
 * 获取某个文章
-1. Request
+
+**Request**
 url: /v1/blog/articles/{article_id}(GET)
 
-2. Response
+**Response**
+
 ```
 {
     "id": 0,
@@ -209,8 +213,10 @@ url: /v1/blog/articles/{article_id}(GET)
 status code: 200 OK
 ```
 * 创建新文章（需合法token）
-1. Request
+
+**Request**
 url: /v1/blog/articles(PUT)
+
 ```
 {
     "category_id": 0,
@@ -219,7 +225,8 @@ url: /v1/blog/articles(PUT)
     "content": ""
 }
 ```
-2. Response
+**Response**
+
 ```
 {
     "categoryId": 0,
@@ -232,8 +239,10 @@ status code: 201
 ```
 
 * 更新文章（需合法token）
-1. Request
+
+**Request**
 url: /v1/blog/articles/{article_id}(PUT)
+
 ```
 {
     "category_id": 0,
@@ -242,7 +251,8 @@ url: /v1/blog/articles/{article_id}(PUT)
     "content": ""
 }
 ```
-2. Response
+**Response**
+
 ```
 {
     "categoryId": 0,
@@ -255,10 +265,12 @@ status code: 200 OK
 ```
 
 * 删除文章（需合法token）
-1. Request
+
+**Request**
 url: /v1/blog/articles/{article_id}(DELETE)
 
-2. Response
+**Response**
+
 ```
 {   
     "message": ""
@@ -266,11 +278,13 @@ url: /v1/blog/articles/{article_id}(DELETE)
 status code: 204 No Content
 ```
 * 获取文章的评论
-1. Request
+
+**Request**
 url: /v1/blog/articles/{article_id}/comments(GET)
 
-2. Response
+**Response**
 Status: 200 OK
+
 ```
     {
         "id": "0",
@@ -285,15 +299,18 @@ Status: 200 OK
 ```
 
 * 添加评论（需合法token）
-1. Request
+
+**Request**
 url: /v1/blog/articles/{article_id}/comments(POST)
+
 ```
 {
     "content": ""
 }
 ```
 
-2. Response
+**Response**
+
 ```
 {
     "id": 0,
