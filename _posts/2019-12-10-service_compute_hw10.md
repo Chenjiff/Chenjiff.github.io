@@ -329,7 +329,10 @@ url: /v1/blog/articles/{article_id}/comments(POST)
 }
 status code: 200 OK
 ```
-注：若有请求**不满足格式要求**会返回以下响应：
+### 注：
+
+若有请求**不满足格式要求**会返回以下响应：
+
 ```
 {
     message: ""
