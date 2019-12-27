@@ -13,11 +13,19 @@ tags:  服务计算
 {:toc}
 
 
+### 获取所有所支持的端口分类
+
+**Request**
+
+url: /v1(GET)
+
+
+
 ### 用户注册
 
 **Request**
 
-url: /v1/users/register(POST)
+url: /v1/user(PUT)
 
 
 
@@ -45,7 +53,7 @@ status code: 201
 
 **Request**
 
-url: /v1/users/login(POST)
+url: /v1/user/(POST)
 
 
 
@@ -220,7 +228,7 @@ status code: 200 OK
 
 **Request**
 
-url: /v1/blog/articles(PUT)
+url: /v1/blog/article(PUT)
 
 ```
 {
@@ -331,18 +339,43 @@ status code: 200 OK
 ```
 ### 注：
 
-若有请求**不满足格式要求**会返回以下响应：
+若有请求内容错误（例如请求要求为json但没有检查到json）或解析失败会返回以下响应：
 
 ```
 {
-    message: ""
+    message: "",
+    "documentation_url"： ""
 }
-status code: 422
+status code: 400 Bad Request
 ```
-未登录：
+json无效字段：
+
+```
+ { "message": "Validation Failed", 
+ "errors": [ { "resource": "Issue", "field": "title", "code": "missing_field" } ] 
+ }
+ status code: 422 Unprocessable Entity
+```
+
+
+
+使用无效凭证：
+
 ```
 {
   "message": "",
+  "documentation_url": ""
 }
 status code: 401 Unauthorized
 ```
+
+短时间多次使用无效凭证：
+
+```
+{
+  "message": "attempts too much!",
+  "documentation_url": ""
+}
+status code： 403 Forbidden
+```
+
