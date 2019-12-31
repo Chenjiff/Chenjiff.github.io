@@ -17,15 +17,18 @@ tags:  服务计算
 **（注：系统均为centos7）**
 
 ### 总体设计
-由于之前RESTful服务使用得比较多，这次想尝试一下别的，所以在服务器的web API的选择上，采用RPC风格。
-在开始之前，对REST、RESTful、RPC的学习文：
+* 由于之前RESTful服务使用得比较多，这次想尝试一下别的，所以在服务器的web API的选择上，采用RPC风格。
+  在开始之前，对REST、RESTful、RPC的学习文：
+
 [https://blog.ndepend.com/rest-vs-restful/](https://blog.ndepend.com/rest-vs-restful/)
 [https://juejin.im/post/5c19f94fe51d45069e53c03c](https://juejin.im/post/5c19f94fe51d45069e53c03c)
 [https://www.zhihu.com/question/28570307](https://www.zhihu.com/question/28570307)
+
 总的来说，可以把RESTful和RPC理解为不同的交流协议，前者通过资源符和状态去与服务端交互，核心是资源，后者则通过方法地址（名）和参数，核心是方法，当然这只是表面的理解，它们的内在区别还有很多，各有优劣。基于RPC的API更加适用行为(也就是命令和过程)，基于REST的API更加适用于构建模型(也就是资源和实体)，处理CRUD。
-RPC框架我选择的是Apache thrift，另外可供选择的还有JSON-RPC。
-由于本次作业为web开发，我们相当于只能把http当成一个传输层协议（而非应用层协议），不能很好的利用http的很多feature。但是无妨，重点是学习RPC和thrift。注：thrift常用于后端（包含中间件）之间而非后端直接与前端，从而能很好地利用thrift基于tcp/udp、利用二进制作为消息传递方式的特点。
-前端使用vue，后端使用Go，使用go提供的http服务作为基本框架。
+
+* RPC框架我选择的是Apache thrift，另外可供选择的还有JSON-RPC。
+  由于本次作业为web开发，我们相当于只能把http当成一个传输层协议（而非应用层协议），不能很好的利用http的很多feature。但是无妨，重点是学习RPC和thrift。注：thrift常用于后端（包含中间件）之间而非后端直接与前端，从而能很好地利用thrift基于tcp/udp、利用二进制作为消息传递方式的特点。
+  前端使用vue，后端使用Go，使用go提供的http服务作为基本框架。
 
 ### Swagger API
 我使用Swagger Editor来编写Swagger API文档，官网本地安装即可。
