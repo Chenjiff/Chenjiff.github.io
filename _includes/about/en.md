@@ -13,7 +13,7 @@ I believe that code is our tool, and with it, we can not only solve problems but
 
 ### About the Blog
 
-The blog is hosted on Aliyun servers, using the Clean Blog framework based on Jekyll, with added features like tags.
+The blog is hosted on Aliyun servers, using [the Clean Blog framework based on Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll), with added features like tags.
 
 Markdown here uses the kramdown parser.
 

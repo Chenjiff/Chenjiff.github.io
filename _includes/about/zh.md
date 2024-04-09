@@ -13,7 +13,7 @@ Hey，我是chenJ，一名后端开发工程师，代码界的老乡人，或者
 
 ### 关于博客
 
-博客搭建在是阿里云服务器，用的是基于Jekyll的Clean Blog框架，多了标签等一些功能。
+博客搭建在是阿里云服务器，用的是基于[Jekyll的Clean Blog框架](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll) ，多了标签等一些功能。
 
 这里Markdown使用的是kramdown解析器。
 
