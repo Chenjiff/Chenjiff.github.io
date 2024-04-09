@@ -1,6 +1,6 @@
-> ***Code and live well***
-
 <img src="https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/default.jpg" width = "60" height = "60" alt="person" />
+
+> ***Code and live well***
 
 ### About Me
 Hey, I'm ChenJ, a backend development engineer, a fellow villager in the world of coding, or, more poetically, a practitioner and explorer in the digital world.
