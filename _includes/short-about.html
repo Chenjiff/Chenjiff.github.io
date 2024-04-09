@@ -1,6 +1,17 @@
 <section class="visible-md visible-lg">
   <hr>
   <h5><a href="{{'/about/' | prepend: site.baseurl }}">ABOUT ME</a></h5>
+  <hr>
+  <script>
+    // 获取span元素
+    var numberSpan = document.getElementById("busuanzi_value_site_pv");
+    // 获取span元素的内容，并转换为数字类型
+    var number = parseInt(numberSpan.innerText, 10);
+    // 加上固定值
+    var updatedNumber = number + 429836;
+    // 更新span元素的内容
+    numberSpan.innerText = updatedNumber;
+  </script>
   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
   <div class="short-about">
