@@ -2,7 +2,7 @@
 layout: post  
 title: "HELLO BLOG"  
 subtitle: "Hello 2019"  
-author: "ChenJF"  
+author: "ChenJ"  
 header-img: "img/post-bg-imgs/1-hello-fight.png"  
 header-mask: 0.4  
 tags:  

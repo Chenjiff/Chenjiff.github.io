@@ -2,7 +2,7 @@
 layout: post  
 title: "从Netty中学习面向接口编程"  
 subtitle: "java"  
-author: "ChenJF"  
+author: "ChenJ"  
 header-img: "img/post-bg-imgs/3-sight.png"  
 header-mask: 0.4  
 catalog: true  

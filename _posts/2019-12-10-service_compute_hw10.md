@@ -2,7 +2,7 @@
 layout: post  
 title: "博客Restful API设计"  
 subtitle: "服务计算"  
-author: "ChenJF"  
+author: "ChenJ"  
 header-img: "img/post-bg-imgs/2-systems-analysis-design.jpg"  
 header-mask: 0.4  
 catalog: true

@@ -1,6 +1,6 @@
->***写写代码，好好生活***
-
 <img src="https://raw.githubusercontent.com/Chenjiff/Chenjiff.github.io/master/img/default.jpg" width = "60" height = "60" alt="person" />
+
+>***写写代码，好好生活***
 
 ### 关于我
 Hey，我是chenJ，一名后端开发工程师，代码界的老乡人，或者更好听的说，一个数字世界的实践者和探险者。

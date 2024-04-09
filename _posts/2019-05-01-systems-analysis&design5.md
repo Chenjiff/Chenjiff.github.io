@@ -2,7 +2,7 @@
 layout: post  
 title: "系统分析与设计五"  
 subtitle: "潘老师的课"  
-author: "ChenJF"  
+author: "ChenJ"  
 header-img: "img/post-bg-imgs/2-systems-analysis-design.jpg"  
 header-mask: 0.4  
 catalog: true

@@ -2,7 +2,7 @@
 layout: post  
 title: "spring服务端返回数据/获取数据"  
 subtitle: "spring boot"  
-author: "ChenJF"  
+author: "ChenJ"  
 header-img: "img/post-bg-imgs/3-sight.png"  
 header-mask: 0.4  
 catalog: true
